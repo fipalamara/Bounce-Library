@@ -1,0 +1,307 @@
+body {
+	min-width:500px;
+	margin:0 auto;
+	padding:50px;
+    font-family: 'OCR A Std';
+    background:#000;
+}
+
+body.noscroll {
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color:#ccc;
+	letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 15px;
+    margin: 5px;
+    color:#fff;
+}
+
+h3 {
+	font-size: 10px;
+	margin:14px 0 4px;
+}
+
+p {
+    font-size: 12px;
+	line-height: 16px;
+    margin: 4px 0;
+    letter-spacing: 1.5px;
+}
+
+a:link, a:visited {
+    color:#000;
+}
+
+a:hover {
+    color:#0b0;
+}
+
+.credit-link {
+    text-align: center;
+    margin: 100px auto 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    opacity: 0.5;
+    z-index: -20;
+}
+
+.credit-link a:link, .credit-link a:visited {
+    color:#fff;
+}
+
+.credit-link a:hover {
+    color:#ff0;
+    transition: color 400ms;
+}
+
+.none {
+    display: none !important;
+}
+
+#header {
+	margin: 0 auto;
+	text-align: center;
+	padding:10px;
+}
+
+#header img {
+	text-align: center;
+	margin-left:-5px;
+}
+
+#controls {
+    border-top: 12px solid #fff;
+    border-bottom: 12px solid #fff;
+    margin: 10px -50px;
+    padding: 20px 100px;
+    text-align: center;
+}
+
+#controls #categories {
+    display: inline-block;
+    margin-left:-20px;
+}
+
+#controls .list {
+    display: none;
+    margin:15px auto;
+}
+
+#controls .list#years {
+    margin:5px auto 10px;
+}
+
+#controls .control, #controls .toggle {
+    color: #fff;	
+    text-transform: uppercase;
+    cursor:pointer;
+    letter-spacing: 1.3px;
+    display: inline-block;
+    text-align: center;
+}
+
+#controls .control {
+    font-size: 11px;
+    margin:0 2px;
+}
+
+#controls #platforms .control {
+    margin-right:8px;
+}
+
+#controls #years .control {
+    margin: 10px 5px 0;
+    padding-top:10px;
+}
+
+#controls #years .control .bar {
+    background-color: #fff;
+    margin-bottom: 3px;
+}
+
+#controls .toggle {
+    font-size: 20px;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+#controls .toggle span.count {
+    font-size: 12px;
+    margin: -4px 0 0 -1px;
+}
+
+#controls .toggle.opened span.count.plus {
+    display: none;
+}
+
+#controls .toggle.closed span.count.minus {
+    display: none;
+}
+
+#controls .control:hover, #controls .toggle:hover {
+	color:#0ff;
+    transition: color 400ms;
+}
+
+#controls .control:hover span.count, #controls .toggle:hover span.count {
+    opacity:.75;
+    transition: opacity 400ms;
+}
+
+#controls #years .control:hover .bar {
+    background-color:#f0f;
+    transition: background-color 400ms;
+}
+
+#controls .selected {
+	color:#f0f;
+	cursor: default;
+}
+
+#controls #years .control.selected .bar {
+    background-color:#ff0;
+}
+
+#controls span.count {
+    font-size:8px;
+    opacity:0.5;
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: 1.0px;
+}
+
+#controls .list span.count {
+    margin: -2px 0 0 3px;    
+}
+
+#controls .selected span.count {
+    opacity:0.75;
+}
+
+#content {
+    margin: 20px auto;
+    text-align: center;
+    min-height: 500px;
+}
+
+#content .game {
+	position: relative;
+    width: 160px;
+    height: 120px;
+    display: inline-block;
+    margin: 10px;
+    background-color:#fff;
+    vertical-align: top;
+    padding:10px;
+    cursor: pointer;
+}
+
+#content .game:hover {
+	background-color:#ff0;
+    transition: background-color 400ms;
+}
+
+#content .game .screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#content .game .screen img {
+    max-width: 160px;
+    max-height: 120px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+#lightbox {
+	display: none;
+	position: fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+    z-index: 20;
+}
+
+#lightbox #back, #lightbox #front {
+	width:100%;
+	height: 100%;
+	background:#fff;
+	position: fixed;
+}
+
+#lightbox #back {
+    opacity: 0.5;
+}
+
+#lightbox #front {
+    margin: auto;
+    padding: 20px;
+    width: 50%;
+    height: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-left: 20px #ff0 solid;
+    border-right: 20px #ff0 solid;
+    overflow: scroll;
+}
+
+#lightbox #game .screen img {
+    width: 100%;
+}
+
+#lightbox #game .screen, #lightbox #game .description {
+	margin:10px;
+	vertical-align: top;
+}
+
+#lightbox #game .description #text, #lightbox #game .description #box {
+	display: inline-block;
+} 
+
+#lightbox #game .description #text {
+	width:55%;
+}
+
+#lightbox #game .description #box {
+    width:45%;
+    vertical-align: top;
+	padding: 10px 0 20px;
+}
+
+#lightbox #game .description #box img {
+	width:100%;
+}
+
+#lightbox #close {
+	background: url('/images/button-close.png') no-repeat right top;
+	position: fixed;
+	top:20px;
+	right:30px;
+	width:50px;
+	height:50px;
+	background-size: 100%;
+	cursor: pointer;
+}
+
+#lightbox #close:hover {
+	background-position: right -50px;
+}
+
