@@ -33,6 +33,7 @@ p {
 	line-height: 16px;
     margin: 4px 0;
     letter-spacing: 1.5px;
+    color:#fff;
 }
 
 a:link, a:visited {
@@ -304,4 +305,6 @@ a:hover {
 #lightbox #close:hover {
 	background-position: right -50px;
 }
+
+
 
