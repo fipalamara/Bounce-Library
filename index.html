@@ -5,7 +5,7 @@
 <meta name="keywords" content="ball, balls, bounce, animation, videogames, game-design, squash, stretch " >
 <meta name="description" content="An archive of bounce programs">
 
-<link rel="stylesheet" type="text/css" href="style.css"> 
+<link rel="stylesheet" type="text/css" href="style.css" href="topnav.css" href="topnav.js"> 
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 
 <!-- ADD IN SCRIPT HYPER LINKS HERE: CHECK SOURCE CODE --> 
@@ -14,46 +14,33 @@
 <title>BOUNCE</title> 
 </head> 
 
+<div class="w3-bar w3-light-grey" id"Search">
+  <div align="right"> 
+  <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
+ 
+ 
+</div>
+
 <body> 
 
 <!-- HEADER --> 
 <div id= "header">
 <img src="header.png" width="500" height="115" alt="BOUNCE" title="BOUNCE"><br> 
 <img src="subheader.png" width="400" height="100" alt="An archive of bounce programs" title="An archive of bounce programs">
+
 </div> 
 
 <!-- CONTROLS --> 
 <div id="controls">
 
-<!-- CATEGORIES --> 
-<div id="categories">
+<!-- NAVIGATION BAR--> 
+<div class="topnav" id="myTopnav">
+  <a href="#platforms" style="text-decoration:none">Platforms<span class="count plus">[+]</span></a>
+  <a href="#demos" style="text-decoration:none">Demos<span class="count plus">[+]</span></a>
+  <a href="#kitchensink" style="text-decoration:none"><font color="magenta"> Kitchen Sink</font><span id="count-all" class="count">[.....]</span></a>
 
-<div class="toggle category closed" id="platform-toggle">
-Platforms
-<span class="count plus">[+]</span>
-<span class="count minus">[-]</span>
-</div> 
-
-<div class="toggle category closed" id="demos-toggle">
-Demos 
-<span class="count plus">[+]</span>
-<span class="count minus">[-]</span> 
-</div> 
-
-<div class="toggle control selected" id="reset-toggle">
-Kitchen Sink
-<span id="count-all" class="count">[.....]</span>
-</div>
-
-</div> 
-
-<!-- TABS -->
-<div class="tab">
-  <button class="tablinks" onclick="openInfo(data, 'Platforms')">Platforms</button>
-  <button class="tablinks" onclick="openInfo(data, 'Demos')">Demos</button>
-  <button class="tablinks" onclick="openInfo(data, 'Kitchen Sink')">Kitchen Sink</button> 
-</div> 
-
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> 
+  </div> 
 
 <!-- LISTS --> 
 <div class="list" id="platforms"></div>
@@ -62,14 +49,22 @@ Kitchen Sink
 </div>
 
 <!-- TEXT --> 
-<p>
-This site is a collection <br> of examples of bounce in computing and other contexts. <br>
-The aim of the collection is not completeness or comprehensiveness.<br> 
-Instead the idea is to draw together many different kinds of computer bounce <br> in order
-to think about how bounce operates as a cultural technique.<br> Bounce is a kind of interaction.<br>
-It is one possible outcome from collision, an outcome which serves to constitute and confirm identity.
-<br>If things don't bounce they break, or fuse, or orbit, or pass through each other.<br> The primary focus of this site
-is examples of how bounce is and has been programmed in computing.<br> Bounce programs are the common sense of computer graphics...
+<article>
+  <h1>Introduction</h1>
+  <p> This site is a collection of examples of bounce in computing and other contexts.<br></p>   
+The aim of the collection is not completeness or comprehensiveness.</p>  
+
+  <p> Instead the idea is to draw together many different kinds of computer bounce <br> in order
+to think about how bounce operates as a cultural technique.<br> Bounce is a kind of interaction.
+It is one possible outcome from collision, an outcome <br> which serves to constitute and confirm identity.
+If things don't bounce they break, or fuse, or orbit, <br> or pass through each other.The primary focus of this site
+is examples of how bounce is and has been <br> programmed in computing. Bounce programs are the common sense of computer graphics...
+</p>
+</article>
+
+<!-- IMAGE --> 
+<p><img src="raytrace.png" alt="Ray Trace Ball"
+style="float:right;width:325px;height:250px;">
 </p>
 
 

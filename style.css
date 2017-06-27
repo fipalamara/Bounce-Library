@@ -1,3 +1,17 @@
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+article {
+    margin-left: 17px;
+    border-left: 1px solid gray;
+    padding: lem;
+    overflow:hidden; 
+    font-family: 'Arial';  
+}
+
 body {
 	min-width:500px;
 	margin:0 auto;
@@ -37,13 +51,11 @@ p {
 }
 
 a:link, a:visited {
-    color:#000;
+    color:#fff;
 }
-
 a:hover {
-    color:#0b0;
+    color:#0ff;
 }
-
 .credit-link {
     text-align: center;
     margin: 100px auto 0;
