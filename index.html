@@ -1,52 +1,59 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8' ">
 <meta name="keywords" content="ball, balls, bounce, animation, videogames, game-design, squash, stretch " >
 <meta name="description" content="An archive of bounce programs">
 
-<link rel="stylesheet" type="text/css" href="style.css" href="topnav.css" href="topnav.js"> 
+<link rel="stylesheet" type="text/css" href="debug.css">
 <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
-<!-- ADD IN SCRIPT HYPER LINKS HERE: CHECK SOURCE CODE --> 
-
-<link rel="shortcut icon" type="image/png" href="redball.icon.png" /> 
+<script src="js/lightbox.js"></script> 
+<script src="js/tab.js"></script>
+<script src="js/content.js"></script> 
+<link rel="shortcut icon" type="image/png" href="images/redball.icon.png" /> 
 <title>BOUNCE</title> 
-</head> 
-
-<div class="w3-bar w3-light-grey" id"Search">
-  <div align="right"> 
-  <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
- 
- 
-</div>
+</head>
 
 <body> 
 
 <!-- HEADER --> 
 <div id= "header">
-<img src="header.png" width="500" height="115" alt="BOUNCE" title="BOUNCE"><br> 
-<img src="subheader.png" width="400" height="100" alt="An archive of bounce programs" title="An archive of bounce programs">
+<img src="images/header.png" width="500" height="115" alt="BOUNCE" title="BOUNCE"><br> 
+<img src="images/subheader.png" width="400" height="100" alt="An archive of bounce programs" title="An archive of bounce programs">
 
 </div> 
 
-<!-- CONTROLS --> 
-<div id="controls">
+<!-- White Border Outline --> 
+<style>
+p.one {
+    border-style: solid;
+    border-color: white;
+    border-width: medium; 
+}
+</style> 
 
-<!-- NAVIGATION BAR--> 
-<div class="topnav" id="myTopnav">
-  <a href="#platforms" style="text-decoration:none">Platforms<span class="count plus">[+]</span></a>
-  <a href="#demos" style="text-decoration:none">Demos<span class="count plus">[+]</span></a>
-  <a href="#kitchensink" style="text-decoration:none"><font color="magenta"> Kitchen Sink</font><span id="count-all" class="count">[.....]</span></a>
-
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a> 
-  </div> 
-
-<!-- LISTS --> 
-<div class="list" id="platforms"></div>
-<div class="list" id="years"></div> 
-
+<!-- TABS --> 
+<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Platforms')">Platforms</button>
+    <button class="tablinks" onclick="openTab(event, 'Demos')">Demos</button>
+    <button class="tablinks" onclick="openTab(event, 'Kitchen Sink')"><font color="magenta"> Kitchen Sink</font></button> 
 </div>
+
+<div id="Platforms" class="tabcontent">
+    <h3>Platforms</h3> 
+    <p> this is a test, can u see me? </p> 
+    <!--Insert catalog layout -->
+</div> 
+
+<div id="Demos" class="tabcontent">
+    <!--<h3>Demos</h3> -->
+    <!--Insert catalog layout -->
+</div>
+
+<div id="Kitchen Sink" class="tabcontent">
+    <!--<h3>Kitchen Sink</h3> --> 
+    <!--Insert catalog layout -->
+</div> 
 
 <!-- TEXT --> 
 <article>
@@ -63,34 +70,21 @@ is examples of how bounce is and has been <br> programmed in computing. Bounce p
 </article>
 
 <!-- IMAGE --> 
-<p><img src="raytrace.png" alt="Ray Trace Ball"
+<p><img src="images/raytrace.png" alt="Ray Trace Ball"
 style="float:right;width:325px;height:250px;">
 </p>
 
-
-<!-- CONTENT --> 
+<!-- This will help with setting up Lightbox feature later --> 
+<!-- CONTENT -->
 <div id="content"></div>
 <div id="lightbox">
 <div id="back"></div>
-<div id="front"><div id="game"></div></div>
+<div id="front"><div id="demo"></div></div>
 <div id="close"></div>
-</div> 
+</div>
 
+<!-- Spotlight Link --> 
 <div class="credit-link"><a target="_blank" href="http://www.scrippscollege.edu/news/features/spotlight-on-faculty-carlin-wing-assistant-professor-of-media-studies"> Spotlight on Carlin Wing</a></div>
-
-
-<!-- ANALYTICS --> 
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-75929210-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
 
 </body>
 </html>
