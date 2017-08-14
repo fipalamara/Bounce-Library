@@ -41,6 +41,19 @@ function lightboxContent() {
   lightboxHTML += ".jpg\">"
   lightboxHTML += "</div>"
 
+  //begin second screen container div
+  lightboxHTML += "<mov ";
+  lightboxHTML += "title=\""
+  lightboxHTML += sheetContent[row].title_long;
+  lightboxHTML += "\" "
+  lightboxHTML += "alt=\""
+  lightboxHTML += sheetContent[row].title_long;
+  lightboxHTML += "\" "
+  lightboxHTML += "src=\"/screens/";
+  lightboxHTML += sheetContent[row].code_name;
+  lightboxHTML += ".mp4\">"  
+  
+
   //begin description container
   lightboxHTML += "<div class=\"description\">"
 
@@ -64,8 +77,8 @@ function lightboxContent() {
   //description container part 3
   lightboxHTML += "<h3>Developer</h3>";
   lightboxHTML += "<p>" + sheetContent[n].developer; + "</p>";
-  lightboxHTML += "<h3>Publisher</h3>";
-  lightboxHTML += "<p>" + sheetContent[n].publisher; + "</p>";
+  lightboxHTML += "<h3>Designer</h3>";
+  lightboxHTML += "<p>" + sheetContent[n].designer; + "</p>";
   lightboxHTML += "<h3>First released</h3>";
   lightboxHTML += "<p>" + sheetContent[n].country; + "</p>";
   lightboxHTML += "<h3>Year</h3>";
@@ -99,6 +112,22 @@ function lightboxContent() {
     lightboxHTML += ".jpg\">"
     lightboxHTML += "</div>"
   }
+
+  if (sheetContent[n].box == 1) {
+    lightboxHTML += "<div id=\"box\">";
+    lightboxHTML += "<mov ";
+    lightboxHTML += "title=\""
+    lightboxHTML += sheetContent[row].title_long;
+    lightboxHTML += "\" "
+    lightboxHTML += "alt=\""
+    lightboxHTML += sheetContent[row].title_long;
+    lightboxHTML += "\" "
+    lightboxHTML += "src=\"/screens/";
+    lightboxHTML += sheetContent[row].code_name;
+    lightboxHTML += ".mp4\">"  
+    lightboxHTML += "<div>"
+  }
+  
 
   //end description container
   lightboxHTML += "</div>"

@@ -3,61 +3,75 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8' ">
 <meta name="keywords" content="ball, balls, bounce, animation, videogames, game-design, squash, stretch " >
-<meta name="description" content="An archive of bounce programs">
+<meta name="description" content="A collection of bounce programs">
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="debug.css">
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="js/lightbox.js"></script> 
 <script src="js/tab.js"></script>
 <script src="js/content.js"></script> 
+<script src="js/control.js"></script> 
+<script src="js/menu.js"></script> 
+<script src="js/tabletop.js"></script>
+
 <link rel="shortcut icon" type="image/png" href="images/redball.icon.png" /> 
 <title>BOUNCE</title> 
 </head>
 
 <body> 
+    
+<!-- Animated Balls --> 
+<canvas id="my_canvas" width="1000px" height="300px"></canvas>
+<script src="js/BB.js"></script>
 
 <!-- HEADER --> 
 <div id= "header">
 <img src="images/header.png" width="500" height="115" alt="BOUNCE" title="BOUNCE"><br> 
-<img src="images/subheader.png" width="400" height="100" alt="An archive of bounce programs" title="An archive of bounce programs">
+<img src="images/subheader.png" width="400" height="100" alt="A collection of bounce programs" title="A collection of bounce programs">
 
 </div> 
-
-<!-- White Border Outline --> 
-<style>
-p.one {
-    border-style: solid;
-    border-color: white;
-    border-width: medium; 
-}
-</style> 
 
 <!-- TABS --> 
 <div class="tab">
-    <button class="tablinks" onclick="openTab(event, 'Platforms')">Platforms</button>
-    <button class="tablinks" onclick="openTab(event, 'Demos')">Demos</button>
-    <button class="tablinks" onclick="openTab(event, 'Kitchen Sink')"><font color="magenta"> Kitchen Sink</font></button> 
+    <span style="display:block; height: 20px;"></span>
+    <button class="tablinks" onclick="openTab(event, 'Bounce Programs')">Bounce Programs</button>
+    <button class="tablinks" onclick="openTab(event, 'Pings')">Pings</button>
+    <button class="tablinks" onclick="openTab(event, 'Pongs')">Pongs</button>
+    <button class="tablinks" onclick="openTab(event, 'Squash and Stretch')">Squash and Stretch</button>
+    <button class="tablinks" onclick="openTab(event, '... the Kitchen Sink')"><font color="magenta"> ... the Kitchen Sink</font></button> 
 </div>
 
-<div id="Platforms" class="tabcontent">
-    <h3>Platforms</h3> 
-    <p> this is a test, can u see me? </p> 
-    <!--Insert catalog layout -->
+<div id="Bounce Programs" class="tabcontent">
+    <h3>Bounce Programs</h3> 
+    <p> A Collection of Scripting Bounce Programs</p> 
 </div> 
 
-<div id="Demos" class="tabcontent">
-    <!--<h3>Demos</h3> -->
-    <!--Insert catalog layout -->
+<div id="Pings" class="tabcontent">
+    <h3>Pings</h3>
+    <p>Programs that instruct a machine to ping another machine<p>
 </div>
 
-<div id="Kitchen Sink" class="tabcontent">
-    <!--<h3>Kitchen Sink</h3> --> 
+<div id="Pongs" class="tabcontent">
+    <h3>Pongs</h3>
+    <p>Collections of video-games with bounce as their primary interaction<p>
+</div>
+
+<div id="Squash and Stretch" class="tabcontent">
+    <h3>Squash and Stretch</h3>
+    <p>Bounce Animations via Graphical Applications<p>
+</div>
+
+<div id="... the Kitchen Sink" class="tabcontent">
+    <!--<h3>... the Kitchen Sink</h3> --> 
     <!--Insert catalog layout -->
 </div> 
 
 <!-- TEXT --> 
 <article>
-  <h1>Introduction</h1>
+  <!--<h1>Introduction</h1>-->
   <p> This site is a collection of examples of bounce in computing and other contexts.<br></p>   
 The aim of the collection is not completeness or comprehensiveness.</p>  
 
@@ -69,10 +83,10 @@ is examples of how bounce is and has been <br> programmed in computing. Bounce p
 </p>
 </article>
 
-<!-- IMAGE --> 
-<p><img src="images/raytrace.png" alt="Ray Trace Ball"
-style="float:right;width:325px;height:250px;">
-</p>
+<!--IMAGE  
+<p><img src="images/squetch_ball.jpg" alt="Disney Squash and Stretch"
+style="float:left;width:500px;height:250px;">
+</p> -->
 
 <!-- This will help with setting up Lightbox feature later --> 
 <!-- CONTENT -->
@@ -83,8 +97,8 @@ style="float:right;width:325px;height:250px;">
 <div id="close"></div>
 </div>
 
-<!-- Spotlight Link --> 
+<!-- Spotlight Link 
 <div class="credit-link"><a target="_blank" href="http://www.scrippscollege.edu/news/features/spotlight-on-faculty-carlin-wing-assistant-professor-of-media-studies"> Spotlight on Carlin Wing</a></div>
-
+-->
 </body>
 </html>

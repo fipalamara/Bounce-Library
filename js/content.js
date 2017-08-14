@@ -1,5 +1,5 @@
 //Set spreadsheet url
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1KeSf1hfJZ-UdiwbXku1TTeRGxRyWaqGhvUoAMDHygvw/pubhtml';
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1Sdi_Fr928hqck_TJPRGeIQnWIJdcIbLZTeQ-L8WXuaA/edit#gid=0';
 var sheetContent;
 var gamesArray;
 var gamesHTML = "";
@@ -78,8 +78,11 @@ function createContentArray() {
   drawContent();
 
   //run counters from count.js
-  countYears();
-  countPlatforms();
+  counttheKitchenSink();
+  countSquashandStretch();
+  countPongs();
+  countPings();
+  countBouncePrograms();
 
   //now draw menu
   drawMenu();
@@ -124,6 +127,18 @@ function drawContent() {
       gamesHTML += "src=\"/screens/";
       gamesHTML += sheetContent[row].code_name;
       gamesHTML += ".jpg\">"
+
+      //.mov content
+      gamesHTML += "<mov ";
+      gamesHTML += "title=\""
+      gamesHTML += sheetContent[row].title_long;
+      gamesHTML += "\" "
+      gamesHTML += "alt=\""
+      gamesHTML += sheetContent[row].title_long;
+      gamesHTML += "\" "
+      gamesHTML += "src=\"/screens/";
+      gamesHTML += sheetContent[row].code_name;
+      gamesHTML += ".mp4\">" 
 
       //end container div
       gamesHTML += "</div>"
